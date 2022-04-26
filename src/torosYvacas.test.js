@@ -25,3 +25,9 @@ describe("buscar toros", () => {
         expect(torosyvacas.adivinar("15")).toEqual("!");
     });
 });
+describe("buscar ternera (#)", () => {
+    it("Si se tiene la cadena 14, y se ingresa 92, devolver una ternera '#'",() => {
+        const torosyvacas = new TorosVacas("14");
+        expect(torosyvacas.adivinar("92")).toEqual("#");
+    });
+});
