@@ -9,3 +9,9 @@ describe("Toros y vacas ->  ganar", () => {
         expect(torosyvacas.adivinar("4")).toEqual("");
     });
 });
+describe("buscar vacas", () => {
+    it("Si se tiene la cadena 12, y se ingresa 2, devolver '*'", () => {
+        const torosyvacas = new TorosVacas("12");
+        expect(torosyvacas.adivinar("25")).toEqual("*");
+    });
+});
