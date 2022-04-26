@@ -11,7 +11,11 @@ class TorosVacas{
         {
             for(let i=0;i<this.codSecreto.length;i++)
             {
-                if(this.codSecreto.includes(intento[i]))
+                if(this.codSecreto[i] === intento[i])
+                {
+                    Mensaje = Mensaje + "!";
+                }
+                else if(this.codSecreto.includes(intento[i]))
                 {
                     Mensaje = Mensaje + "*";
                 }
