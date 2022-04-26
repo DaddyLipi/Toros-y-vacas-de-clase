@@ -5,12 +5,12 @@ describe("Toros y vacas ->  ganar", () => {
         expect(torosyvacas.adivinar("3")).toEqual("ganaste");
     });
     it("Si no se adivina la cadena devolver '' (vacio)", ()=>{
-        const torosyvacas = new TorosVacas("3");
+        const torosyvacas = new TorosVacas("2");
         expect(torosyvacas.adivinar("4")).toEqual("");
     });
 });
-describe("buscar vacas", () => {
-    it("Si se tiene la cadena 12, y se ingresa 2, devolver '*'", () => {
+describe("buscar vacas (*)", () => {
+    it("Si se tiene la cadena 12, y se ingresa 25, devolver '*'", () => {
         const torosyvacas = new TorosVacas("12");
         expect(torosyvacas.adivinar("25")).toEqual("*");
     });
@@ -19,7 +19,7 @@ describe("buscar vacas", () => {
         expect(torosyvacas.adivinar("21")).toEqual("**");
     });
 });
-describe("buscar toros", () => {
+describe("buscar toros (!)", () => {
     it("Si se tiene la cadena 12, y se ingresa 15, devolver '!'", () => {
         const torosyvacas = new TorosVacas("12");
         expect(torosyvacas.adivinar("15")).toEqual("!");

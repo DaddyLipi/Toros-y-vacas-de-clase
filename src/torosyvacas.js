@@ -15,9 +15,18 @@ class TorosVacas{
                 {
                     Mensaje = Mensaje + "!";
                 }
-                else if(this.codSecreto.includes(intento[i]))
-                {
-                    Mensaje = Mensaje + "*";
+                else {                  
+                    if(this.codSecreto.includes(intento[i]))
+                    {
+                        Mensaje = Mensaje + "*";
+                    }
+                    else
+                    {
+                        if(this.codSecreto.includes(intento[i] + 1) || this.codSecreto.includes(intento[i] - 1))
+                        {
+                            Mensaje = Mensaje + "#";
+                        }
+                    }
                 }
             }   
         }
