@@ -3,6 +3,7 @@ import TorosVacas from "./torosyvacas.js";
 const form = document.querySelector("#tv-form");
 const codigoSec = document.querySelector("#codigosecreto");
 const div = document.querySelector("#resultado-div");
+
 const adivinarForm = document.querySelector("#adivinar-form");
 const adivinarIntento = document.querySelector("#intento");
 
@@ -15,4 +16,12 @@ form.addEventListener("submit", (event) => {
   torosYvacas = new TorosVacas(codigo); 
 
   div.innerHTML = "<p>" +  codigo + "</p>";
+});
+
+adivinarForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const intento = adivinarIntento.value;
+
+  div.innerHTML = "<p>" + torosYvacas.adivinar(intento) + "</p>";
 });
