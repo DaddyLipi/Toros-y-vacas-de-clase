@@ -1,3 +1,4 @@
+import TorosVacas from "./torosyvacas.js"
 describe("Toros y vacas ->  ganar", () => {
     it("Si se adivino la cadena devolver ganaste", ()=>{
         const torosyvacas = new TorosVacas("3");
@@ -8,8 +9,3 @@ describe("Toros y vacas ->  ganar", () => {
         expect(torosyvacas.adivinar("4")).toEqual("");
     });
 });
-class TorosVacas{
-    adivinar(intento){
-        return "ganaste";
-    }
-} 

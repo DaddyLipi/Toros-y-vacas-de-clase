@@ -1,15 +1,18 @@
-import sumar from "./sumador";
+import TorosVacas from "./torosyvacas.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const form = document.querySelector("#tv-form");
+const codigoSec = document.querySelector("#codigosecreto");
 const div = document.querySelector("#resultado-div");
+const adivinarForm = document.querySelector("#adivinar-form");
+const adivinarIntento = document.querySelector("#intento");
+
+let torosYvacas = "";
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const codigo = codigoSec.value; 
+  torosYvacas = new TorosVacas(codigo); 
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" +  codigo + "</p>";
 });
